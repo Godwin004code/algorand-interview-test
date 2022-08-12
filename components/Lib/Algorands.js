@@ -43,10 +43,11 @@ const Query = () => {
         )
         .then(res => 
             
-            setDatas(res.data.asalist.results)
-            
+            {
+                setDatas(res.data.asalist.results)
+            setLoading(false)
+            }
         )
-        setLoading(false)
        }
        fetchData()
     }, [])
