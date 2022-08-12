@@ -10,7 +10,7 @@ const SingleAlgo = ({assetID, available, name, logo, unitname1}) => {
         <h2 className='font-medium text-xl text-center my-2'>
           {name}
         </h2>
-        <button className='w-[68px] h-[30px] text-white text-sm mx-auto rounded-md' style={{backgroundColor: available === true ? 'green' : 'red'}}>Available</button>
+    <button className='w-[80px] h-[30px]  text-white text-sm mx-auto rounded-md' style={{backgroundColor: available === true ? 'green' : 'red'}}>{available ? 'Available' : 'Unavailable'}</button>
     </div>
   )
 }
