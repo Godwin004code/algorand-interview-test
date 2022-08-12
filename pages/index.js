@@ -1,10 +1,11 @@
 import React from 'react'
-import Query from '../components/Query'
+import Algorands from '../components/Lib/Algorands'
+import Header from '../components/Header/Header'
 export default function Home() {
   return (
-    <div>
-      12636ege
-      <Query />
-    </div>
+    <>
+     <Header />
+      <Algorands />
+    </>
   )
 }
