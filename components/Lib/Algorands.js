@@ -4,7 +4,7 @@ import React, {
     useState
 } from 'react'
 import SingleAlgo from './SingleAlgo'
-
+import Skeleton from 'react-loading-skeleton'
 
 const Query = () => {
     const [datas, setDatas] = useState([])
@@ -45,7 +45,7 @@ const Query = () => {
             
             {
                 setDatas(res.data.asalist.results)
-            setLoading(false)
+                setLoading(false)
             }
         )
        }
@@ -57,7 +57,7 @@ const Query = () => {
 on ASAlytics</h2> 
 <section className='mx-auto w-[90%] flex justify-between flex-wrap'>
     {
-        loading ? 'Loading' : datas.map((item) => {
+        loading ? 'Loading Data...' : datas.map((item) => {
             const { assetId,available, logo, name, unitname1} = item
             return (
                 <SingleAlgo
