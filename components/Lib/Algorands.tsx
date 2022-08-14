@@ -68,7 +68,7 @@ on ASAlytics</h2>
             const { assetId,available, logo, name, unitname1} = item
             return (
                 <SingleAlgo
-                key={assetId} name={name} assetId={assetId} logo={logo} available={available} unitname1={unitname1} />
+                key={assetId} name={name} assetID={assetId} logo={logo} available={available} unitname1={unitname1} />
             )
         })
     }
