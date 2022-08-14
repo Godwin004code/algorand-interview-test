@@ -1,9 +1,10 @@
 
 import React from 'react'
+import { Algorands } from '../../types'
 
-const SingleAlgo = ({assetID, available, name, logo, unitname1}) => {
+const SingleAlgo: React.FC = ({assetID, available, name, logo, unitname1}: Algorands) => {
   return (
-    <div className='border-solid border-zinc-200 border-2 rounded-md w-[18%] mb-2 flex flex-col justify-center p-3 md:w-[45%]'>
+    <div className='border-solid border-[#B7BECC] border-[1px] rounded-lg w-[18%] mb-2 flex flex-col justify-center p-3 md:w-[45%]'>
         <div>
             <img className='w-[30px] mx-auto h-[50px]' src={logo} alt={name} />
         </div>

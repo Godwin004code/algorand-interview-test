@@ -5,10 +5,12 @@ import React, {
 } from 'react'
 import SingleAlgo from './SingleAlgo'
 import Skeleton from 'react-loading-skeleton'
+import { Lines } from 'react-preloaders';
 
 const Query = () => {
     const [datas, setDatas] = useState([])
     const [loading, setLoading] = useState(false)
+    const [errorMessage, setErrorMessage] = useState("")
     const ALGORAND = `{
   
         asalist {
@@ -47,17 +49,22 @@ const Query = () => {
                 setDatas(res.data.asalist.results)
                 setLoading(false)
             }
-        )
+        ).catch(() => {
+            setErrorMessage("Unable to fetch Algorand standard assets list. Please check your internet connection.");
+            setLoading(false);
+         });
        }
        fetchData()
     }, [])
     return ( <>
     <h2 className='font-medium text-3xl text-black text-center mb-20 mt-5'>
     List of Algorand Standard Assets 
-on ASAlytics</h2> 
+on ASAlytics</h2>
+{errorMessage && <div className="text-red-500 text-center font-bold text-xl">{errorMessage}</div>} 
 <section className='mx-auto w-[90%] flex justify-between flex-wrap'>
+
     {
-        loading ? 'Loading Data...' : datas.map((item) => {
+        loading ?  <Lines customLoading={loading} /> : datas.map((item) => {
             const { assetId,available, logo, name, unitname1} = item
             return (
                 <SingleAlgo
