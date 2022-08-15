@@ -10,6 +10,8 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module'
     },
+   
+    plugins: ["react", 'import', '@typescript-eslint'],
+    extends: ["plugin:@typescript-eslint/recommended"],
     
-    plugins: ["react", 'import', '@typescript-eslint']
 }
