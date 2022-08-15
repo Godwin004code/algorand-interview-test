@@ -1,8 +1,15 @@
+import React from "react";
 
 export interface AlgorandsTypes {
     assetID: number,
-    name: String,
-    available: Boolean,
-    unitname1: String,
-    logo: String
+    name: string,
+    available: boolean,
+    unitname1: string,
+    logo: string
+}
+export type AlgorandsContextType = {
+    datas:  AlgorandsTypes[];
+    loading: boolean,
+    errorMessage: string,
+    fetchData: () => void,
 }

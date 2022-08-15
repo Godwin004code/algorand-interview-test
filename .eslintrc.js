@@ -1,12 +1,15 @@
 module.exports = {
     root: true,
+    parser: '@typescript-eslint/parser',
     parserOptions: {
-        parser: 'babel-eslint',
+        sourceType: 'module',
+        ecmaVersion: 2017,
         ecmaFeatures: {
             jsx: true
         },
         ecmaVersion: 2018,
         sourceType: 'module'
     },
-    plugins: ["react", 'import']
+    
+    plugins: ["react", 'import', '@typescript-eslint']
 }

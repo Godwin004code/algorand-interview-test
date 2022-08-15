@@ -1,9 +1,10 @@
 
 import React from 'react'
-import Image from 'next/image'
-import { AlgorandsTypes } from '../../types'
+import { AlgorandsTypes } from '../types'
 
-const SingleAlgo = ({ available, name, logo, unitname1}) => {
+
+
+const SingleAlgo: React.FC<AlgorandsTypes> = ({ assetID, available, name, logo, unitname1}) => {
   return (
     <div className='border-solid border-[#B7BECC] border-[1px] rounded-lg w-[18%] mb-2 flex flex-col justify-center p-3 md:w-[45%]'>
         <div>
