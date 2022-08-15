@@ -1,16 +1,15 @@
-import { data } from 'autoprefixer'
+
 import React, {
     useEffect,
     useState
 } from 'react'
 import SingleAlgo from './SingleAlgo'
-import Skeleton from 'react-loading-skeleton'
-import { Lines } from 'react-preloaders';
+import Skeleton from '../Skeleton/Skeleton'
 
-const Query = () => {
+const Algorands = () => {
     const [datas, setDatas] = useState([])
-    const [loading, setLoading] = useState(false)
-    const [errorMessage, setErrorMessage] = useState("")
+    const [loading, setLoading] = useState<Boolean>(false)
+    const [errorMessage, setErrorMessage] = useState<String>("")
     const ALGORAND = `{
   
         asalist {
@@ -64,7 +63,7 @@ on ASAlytics</h2>
 <section className='mx-auto w-[90%] flex justify-between flex-wrap'>
 
     {
-        loading ?  <Lines customLoading={loading} /> : datas.map((item) => {
+        loading ?  Array(160).fill(<Skeleton />) : datas.map((item) => {
             const { assetId,available, logo, name, unitname1} = item
             return (
                 <SingleAlgo
@@ -73,8 +72,9 @@ on ASAlytics</h2>
         })
     }
 </section>
+
          </>
     )
 }
 
-export default Query
+export default Algorands

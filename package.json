@@ -10,17 +10,11 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.8",
-    "graphql": "^16.5.0",
-    "graphql-request": "^4.3.0",
-    "graphql-tag": "^2.12.6",
     "next": "12.2.5",
     "postcss": "^8.4.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-loading-skeleton": "^3.1.0",
-    "react-preloaders": "^3.0.3",
-    "tailwindcss": "^3.1.8",
-    "use-sync-external-store": "^1.2.0"
+    "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
     "@types/node": "^18.7.3",

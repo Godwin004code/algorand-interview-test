@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
+    ],
     "target": "es5",
     "lib": [
       "dom",
@@ -23,7 +27,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/Lib/Algorands.ts"  ],
+, "components/Lib/Algorands.ts", "components/Lib/Algorands.tsx", "components/Skeleton/Skeleton.tsx" ],
   "exclude": [
     "node_modules"
   ]

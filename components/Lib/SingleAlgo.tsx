@@ -1,12 +1,13 @@
 
 import React from 'react'
+import Image from 'next/image'
 import { Algorands } from '../../types'
 
-const SingleAlgo = ({assetID, available, name, logo, unitname1}) => {
+const SingleAlgo: React.FC<Algorands> = ({assetID, available, name, logo, unitname1}): JSX.Element => {
   return (
     <div className='border-solid border-[#B7BECC] border-[1px] rounded-lg w-[18%] mb-2 flex flex-col justify-center p-3 md:w-[45%]'>
         <div>
-            <img className='w-[30px] mx-auto h-[50px]' src={logo} alt={name} />
+          {logo && <img className='w-[30px] mx-auto h-[50px]' src={logo} alt={name} />}
         </div>
         <h2 className='font-medium text-xl text-center my-2'>
           {name}

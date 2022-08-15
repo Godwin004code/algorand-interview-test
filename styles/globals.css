@@ -7,4 +7,15 @@
 body {
     background: #F2FBF6;
     font-family: 'Readex Pro', sans-serif;
+    
+}
+
+.border-solids {
+    animation: skeleton 1s ease infinite alternate;
+}
+
+@keyframes skeleton {
+    to {
+        opacity: 0.5;
+    }
 }
