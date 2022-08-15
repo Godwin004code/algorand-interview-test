@@ -5,7 +5,6 @@ import React, {
 } from 'react'
 import SingleAlgo from './SingleAlgo'
 import Skeleton from '../Skeleton/Skeleton'
-import { Algorands } from '../../types'
 
 const Algorands = () => {
     const [datas, setDatas] = useState([])
@@ -68,7 +67,7 @@ on ASAlytics</h2>
             const { assetId,available, logo, name, unitname1} = item
             return (
                 <SingleAlgo
-                key={assetId} name={name} assetID={assetId} logo={logo} available={available} unitname1={unitname1} />
+                key={assetId} name={name}  logo={logo} available={available} unitname1={unitname1} />
             )
         })
     }

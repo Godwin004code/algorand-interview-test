@@ -1,5 +1,5 @@
 
-export interface Algorands {
+export interface AlgorandsTypes {
     assetID: number,
     name: String,
     available: Boolean,
