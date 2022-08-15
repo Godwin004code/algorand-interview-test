@@ -5,6 +5,7 @@ import React, {
 } from 'react'
 import SingleAlgo from './SingleAlgo'
 import Skeleton from '../Skeleton/Skeleton'
+import { Algorands } from '../../types'
 
 const Algorands = () => {
     const [datas, setDatas] = useState([])
