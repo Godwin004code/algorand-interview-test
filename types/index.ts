@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import React from "react";
 
 export interface AlgorandsTypes {
@@ -12,4 +13,8 @@ export type AlgorandsContextType = {
     loading: boolean,
     errorMessage: string,
     fetchData: () => void,
+}
+
+export interface ALogo {
+    src: StaticImageData 
 }
