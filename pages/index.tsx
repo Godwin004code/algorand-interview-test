@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
     <Head>
-    <meta name='theme-color' content='#F2FBF6' />
+    <meta name='theme-color' content='#000' />
     </Head>
      <Header />
       <Algorands />
