@@ -16,7 +16,7 @@ const AppProvider = ({
  const ALGORAND = `{
   
     asalist {
-    results {
+    result {
       name,
       assetId,
       available,
@@ -47,7 +47,9 @@ fetch('https://analytics-api.herokuapp.com/analytics', {
 .then(res => 
     
     {
-        setDatas(res.data.asalist.results)
+        //console.log(res.data.asalist.results);
+        
+        setDatas(res.data.asalist.result)
         setLoading(false)
     }
 ).catch(() => {
