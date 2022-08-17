@@ -1,5 +1,4 @@
 import { StaticImageData } from "next/image";
-import React from "react";
 
 export interface AlgorandsTypes {
     assetID: number,
